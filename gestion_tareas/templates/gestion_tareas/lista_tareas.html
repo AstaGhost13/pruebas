@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Lista de Tareas</h1>
+        <ul class="task-list">
+            {% for tarea in tareas %}
+                <li class="task-item {% if tarea.completada %}completed{% else %}pending{% endif %}">
+                    {{ tarea.titulo }} - {% if tarea.completada %}✅{% else %}❌{% endif %}
+                </li>
+            {% empty %}
+                <li class="empty-task">No hay tareas aún.</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'agregar_tarea' %}" class="btn">➕ Agregar Tarea</a>
+    </div>
+</body>
+</html>

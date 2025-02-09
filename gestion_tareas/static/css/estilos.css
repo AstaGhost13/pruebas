@@ -1,0 +1,83 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+h1 {
+    color: #007bff;
+    font-size: 24px;
+}
+
+/* Lista de tareas */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.task-item.completed {
+    color: green;
+    font-weight: bold;
+}
+
+.task-item.pending {
+    color: red;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.back-btn {
+    background-color: #6c757d;
+}
+
+.back-btn:hover {
+    background-color: #545b62;
+}
+
+/* Formulario */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
